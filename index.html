@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sarthak Singh's Developer Portfolio — AI/ML Enthusiast, Full Stack Developer, Problem Solver." />
+  <title>Sarthak Singh | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Global Fixed Spline Background -->
+  <div class="spline-container">
+    <spline-viewer url="https://prod.spline.design/dEeLqHLeKHKBhNiM/scene.splinecode"></spline-viewer>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">S<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ─────────────────── HERO ─────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting reveal-up">Hello, I'm</p>
+      <h1 class="hero-name reveal-up delay-1">Sarthak Singh<span class="accent">.</span></h1>
+      <div class="hero-subtitle reveal-up delay-2">
+        <span id="typedText"></span><span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc reveal-up delay-3">
+        Driven by “what if?” and “one more try”
+      </p>
+      <div class="hero-cta reveal-up delay-4">
+        <a href="#projects" class="btn btn-primary magnetic">View Work</a>
+        <a href="#contact" class="btn btn-ghost magnetic">Contact Me</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────────── ABOUT ─────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-tag reveal-up">About Me</div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal-left">
+          <div class="about-image-glow"></div>
+          <div class="about-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <video src="assets/bitmoji_video.mp4" class="avatar-img" autoplay loop muted playsinline></video>
+            </div>
+          </div>
+          <div class="floating-badge badge-1">Python</div>
+          <div class="floating-badge badge-2">React</div>
+          <div class="floating-badge badge-3">TensorFlow</div>
+        </div>
+        <div class="about-text reveal-right">
+          <h2 class="section-title">Building things <span class="accent">that matter</span></h2>
+          <p class="about-para">
+            I’m a Computer Science undergrad at Graphic Era Hill University (B.Tech ’23–’27)—basically turning caffeine ☕ into code and occasionally into something that actually works.
+          </p>
+          <p class="about-para">
+            I’m naturally curious, a bit stubborn when solving problems, and the kind of person who won’t stop until things make sense (or at least run without errors). I like keeping things practical, figuring stuff out hands-on, and questioning things instead of just accepting them.
+          </p>
+          <p class="about-para">
+            Most of what I do is driven by a mix of persistence, late-night focus, and the belief that if something feels complicated, it’s just not understood well enough yet.
+          </p>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">NLP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────── PROJECTS ─────────────────── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-tag reveal-up">Projects</div>
+      <h2 class="section-title center reveal-up">My Cool <span class="accent">Stuff</span></h2>
+
+      <div class="filter-tabs reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="aiml">AI / ML</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal-up" data-category="aiml">
+          <div class="card-glow"></div>
+          <div class="card-img">
+            <div class="card-slideshow">
+              <img src="assets/medilineage/one.jpeg" alt="AI Health Tracker Snapshot 1" class="slide active">
+              <img src="assets/medilineage/two.jpeg" alt="AI Health Tracker Snapshot 2" class="slide">
+              <img src="assets/medilineage/three.jpeg" alt="AI Health Tracker Snapshot 3" class="slide">
+              <img src="assets/medilineage/four.jpeg" alt="AI Health Tracker Snapshot 4" class="slide">
+            </div>
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">AI Health Tracker (Genetic Insights)</h3>
+            <p class="card-desc">Unified platform storing health lineage. ML models predict risks for diseases like
+              diabetes & cancer to enhance preventive healthcare.</p>
+            <div class="card-tags">
+              <span>React.js</span><span>TensorFlow</span><span>MySQL</span><span>Scikit-Learn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal-up delay-1" data-category="web">
+          <div class="card-glow"></div>
+          <div class="card-img">
+            <div class="card-slideshow">
+              <img src="assets/file_system_simulator/one.png" alt="FS Simulator Snapshot 1" class="slide active">
+              <img src="assets/file_system_simulator/two.png" alt="FS Simulator Snapshot 2" class="slide">
+              <img src="assets/file_system_simulator/three.png" alt="FS Simulator Snapshot 3" class="slide">
+              <img src="assets/file_system_simulator/four.png" alt="FS Simulator Snapshot 4" class="slide">
+              <img src="assets/file_system_simulator/five.png" alt="FS Simulator Snapshot 5" class="slide">
+            </div>
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">File System Simulator</h3>
+            <p class="card-desc">Web-based simulator visualizing disk block allocation (Contiguous, Linked, Indexed)
+              utilizing a Flask API.</p>
+            <div class="card-tags">
+              <span>React</span><span>Flask</span><span>Python</span><span>OS Concepts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal-up delay-2" data-category="web">
+          <div class="card-glow"></div>
+          <div class="card-img">
+            <div class="card-slideshow">
+              <img src="assets/snapslide/one.png" alt="SnapSlide Snapshot 1" class="slide active">
+              <img src="assets/snapslide/two.png" alt="SnapSlide Snapshot 2" class="slide">
+              <img src="assets/snapslide/three.png" alt="SnapSlide Snapshot 3" class="slide">
+              <img src="assets/snapslide/four.png" alt="SnapSlide Snapshot 4" class="slide">
+            </div>
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">SnapSlide</h3>
+            <p class="card-desc">SnapSlide is an interactive vision-based puzzle game that captures real-time camera input, uses hand gesture recognition to select a frame, and transforms it into a dynamic, solvable tile puzzle—challenging players to think fast and achieve high scores through engaging, gesture-driven gameplay.</p>
+            <div class="card-tags">
+              <span>Python</span><span>OpenCV</span><span>Mediapipe</span><span>React</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal-up" data-category="web">
+          <div class="card-glow"></div>
+          <div class="card-img">
+            <div class="card-slideshow">
+              <img src="assets/transpiler_snapshots/one.png" alt="Transpiler Snapshot 1" class="slide active">
+              <img src="assets/transpiler_snapshots/two.png" alt="Transpiler Snapshot 2" class="slide">
+              <img src="assets/transpiler_snapshots/three.png" alt="Transpiler Snapshot 3" class="slide">
+              <img src="assets/transpiler_snapshots/four.png" alt="Transpiler Snapshot 4" class="slide">
+              <img src="assets/transpiler_snapshots/five.png" alt="Transpiler Snapshot 5" class="slide">
+            </div>
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Multi-lingual Transpiler</h3>
+            <p class="card-desc">Developed a multilingual transpiler that translates code across languages such as C++, Java, and Python using tokenization and an intermediate representation, enabling consistent and maintainable cross-language code generation.</p>
+            <div class="card-tags">
+              <span>Python</span><span>C++</span><span>Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────── EXPERIENCE ─────────────────── -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-tag reveal-up">Journey</div>
+      <h2 class="section-title center reveal-up">Education &amp; <span class="accent">Milestones</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Aug 2023 – Jun 2027</span>
+            <h3>B.Tech, Computer Science</h3>
+            <p class="tl-company">Graphic Era Hill University, Bhimtal</p>
+            <p class="tl-desc">Pursuing foundational OS, DBMS, Algorithms, and OOP. Active Student Representative in the
+              Sports Council.</p>
+            <div class="tl-tags"><span>DSA</span><span>Algorithm Design</span><span>OS</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023</span>
+            <h3>Intermediate</h3>
+            <p class="tl-company">Lakes International School, Bhimtal</p>
+            <p class="tl-desc">Successfully completed higher secondary education with a focus on science and mathematics
+              fundamentals.</p>
+            <div class="tl-tags"><span>Science</span><span>Mathematics</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021</span>
+            <h3>Matriculation</h3>
+            <p class="tl-company">Lakes International School, Bhimtal</p>
+            <p class="tl-desc">Successfully completed secondary school education laying the groundwork for technical
+              studies.</p>
+            <div class="tl-tags"><span>General</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────── SKILLS ─────────────────── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-tag reveal-up">Expertise</div>
+      <h2 class="section-title center reveal-up">Tech <span class="accent">Stack</span></h2>
+
+      <div class="skills-grid">
+
+        <div class="skills-category reveal-up">
+          <div class="skills-cat-header">
+            <span class="skills-cat-icon">🖥️</span>
+            <h3>Programming &amp; Web</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-row"><span>Python / Java</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="90"></div>
+              </div><span class="pct">90%</span>
+            </div>
+            <div class="skill-row"><span>C/C++</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="85"></div>
+              </div><span class="pct">85%</span>
+            </div>
+            <div class="skill-row"><span>JavaScript / React</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="88"></div>
+              </div><span class="pct">88%</span>
+            </div>
+            <div class="skill-row"><span>HTML / CSS</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="92"></div>
+              </div><span class="pct">92%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal-up delay-1">
+          <div class="skills-cat-header">
+            <span class="skills-cat-icon">🧠</span>
+            <h3>AI / ML &amp; Data</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-row"><span>TensorFlow / Scikit-Learn</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="85"></div>
+              </div><span class="pct">85%</span>
+            </div>
+            <div class="skill-row"><span>NumPy / Pandas</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="88"></div>
+              </div><span class="pct">88%</span>
+            </div>
+            <div class="skill-row"><span>NLP / spaCy</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="80"></div>
+              </div><span class="pct">80%</span>
+            </div>
+            <div class="skill-row"><span>MediaPipe / OpenCV</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="75"></div>
+              </div><span class="pct">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal-up delay-2">
+          <div class="skills-cat-header">
+            <span class="skills-cat-icon">🔧</span>
+            <h3>Tools, APIs &amp; DBs</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-row"><span>Flask / FastAPI</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="82"></div>
+              </div><span class="pct">82%</span>
+            </div>
+            <div class="skill-row"><span>MongoDB / MySQL</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="88"></div>
+              </div><span class="pct">88%</span>
+            </div>
+            <div class="skill-row"><span>Git / GitHub</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="90"></div>
+              </div><span class="pct">90%</span>
+            </div>
+            <div class="skill-row"><span>VS Code / Jupyter</span>
+              <div class="bar">
+                <div class="bar-fill" data-w="95"></div>
+              </div><span class="pct">95%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────── PROFILES ─────────────────── -->
+  <section class="profiles section" id="profiles">
+    <div class="container">
+      <div class="section-tag reveal-up">Competitive Programming</div>
+      <h2 class="section-title center reveal-up">Coding <span class="accent">Profiles</span></h2>
+
+      <div class="profiles-grid">
+        <!-- LeetCode -->
+        <a href="https://leetcode.com/u/Sarthak_Singh24/" target="_blank" rel="noopener" class="profile-card reveal-up">
+          <div class="profile-glow"></div>
+          <div class="profile-icon">
+            <img src="assets/leetcode.png" alt="LeetCode Logo">
+          </div>
+          <div class="profile-info">
+            <h3>LeetCode</h3>
+            <p class="profile-stat">400+ Problems Solved</p>
+            <span class="profile-handle">@Sarthak_Singh24</span>
+          </div>
+        </a>
+
+        <!-- Codeforces -->
+        <a href="https://codeforces.com/profile/Sarthak_Singh24" target="_blank" rel="noopener" class="profile-card reveal-up delay-1">
+          <div class="profile-glow"></div>
+          <div class="profile-icon">
+            <img src="assets/codeforces.png" alt="Codeforces Logo">
+          </div>
+          <div class="profile-info">
+            <h3>Codeforces</h3>
+            <p class="profile-stat">Competitive Programmer</p>
+            <span class="profile-handle">@sarthak</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────── CONTACT ─────────────────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-tag reveal-up">Get In Touch</div>
+      <h2 class="section-title center reveal-up">Let's <span class="accent">Connect</span></h2>
+      <p class="contact-sub reveal-up">Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+      <div class="contact-wrap">
+        <div class="contact-info reveal-up">
+          <div class="social-links">
+            <a href="https://github.com/Sarthak-2401" target="_blank" rel="noopener" class="social-link">
+              <div class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
+                </svg>
+              </div>
+              <div>
+                <span class="social-name">GitHub</span>
+                <span class="social-handle">@Sarthak-2401</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/sarthak-singh-29b302322" target="_blank" rel="noopener"
+              class="social-link">
+              <div class="social-icon linkedin">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <div>
+                <span class="social-name">LinkedIn</span>
+                <span class="social-handle">Sarthak Singh</span>
+              </div>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sarthaksingh1836@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <div class="social-icon email">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+              </div>
+              <div>
+                <span class="social-name">Email</span>
+                <span class="social-handle">sarthaksingh1836@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:8449261053" class="social-link">
+              <div class="social-icon phone">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.7.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.27 1.11z" />
+                </svg>
+              </div>
+              <div>
+                <span class="social-name">Phone</span>
+                <span class="social-handle">+91 8449261053</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built by <span class="accent">Sarthak Singh</span> · Powered by late nights &amp; caffeine.</p>
+    <p class="footer-sub">AI/ML Explorer &amp; Full Stack Developer</p>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.90/build/spline-viewer.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
